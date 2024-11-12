@@ -14,6 +14,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Beiruti:wght@200..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Animación para los textos AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 <body>
     <header>
@@ -50,18 +54,17 @@
 
     <main>
         <section class="banner">
-            <div class="banner-content"> 
-                <div class="banner-text">
-                    <h5>Con la compra de un Sixpack</h5>
-                    <h1 class="title">LLevá una gratis</h1>
-                    <p>En serio! Pagas 5 latas y te llevas 6</p>
-                    <div class="main-banner">
-                        <a href="#" class="btn">Ver opciones</a>
-                    </div>
+            <div class="banner-text"> 
+                <h5 data-aos="fade-right" data-aos-duration="1400">Con la compra de un Sixpack</h5>
+                <h1 class="title" data-aos="zoom-in-left" data-aos-duration="1400" data-aos-delay="200">LLevá una gratis</h1>
+                <p data-aos="fade-right" data-aos-duration="1400" data-aos-delay="300">En serio, Pagas 5 latas y llevas 6!</p>
+                <div class="main-banner" data-aos="flip-down" data-aos-duration="1400" data-aos-delay="300">
+                    <a href="#" class="btn">Ver opciones</a>
                 </div>
-                <div class="banner-img">
-                    <img src="" alt="">
-                </div>
+            </div> 
+
+            <div class="banner-img" data-aos="zoom-in" data-aos-duration="1400">
+                <img src="./img/bannerSixpack.png" alt="Sixpack de Cervezas">
             </div>
         </section>
     </main>
@@ -138,5 +141,13 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script> 
+        AOS.init({
+            offset:1,
+        }); 
+    </script>
+
 </body>
 </html>

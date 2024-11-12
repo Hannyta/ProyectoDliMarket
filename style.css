@@ -9,6 +9,7 @@
 
 :root {
     --primary-color: #49529F;
+    --primary-color-30: #394079;
     --secondary-color: #EF7F4F;
     --tertiary-color: #E6404A;
     --dark-color: #1F1F1F;
@@ -172,10 +173,15 @@ nav.active {
 
 /* Estilos del Banner */
 
+section {
+    padding: 0 14%;
+}
+
 .banner {
     position: relative;
     width: 100%;
     height: 100vh;
+    background: linear-gradient(rgba(5, 7, 12, 0.15), rgba(5, 7, 12, 0.25));
     background-color: var(--primary-color);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -186,6 +192,11 @@ nav.active {
 .banner-img {
     width: 100%;
     height: auto;
+}
+
+.banner-img img{
+    width: 100%;
+    filter: drop-shadow(0 0 12px #000000);
 }
 
 .banner-text h1 {
@@ -200,7 +211,7 @@ nav.active {
     font-size: var(--jumbo-font);
     font-weight: 400;
     letter-spacing: 1px;
-    color: var(--light-gray)
+    color: var(--secondary-color)
 }
 
 .banner-text p {
@@ -211,6 +222,28 @@ nav.active {
     line-height: 32px;
     color: var(--light-gray);
     margin-bottom: 40px;
+}
+
+.main-banner {
+    display: flex;
+    align-items: center;
+}
+
+.btn{
+    display: inline-block;
+    padding: 13px 32px;
+    background: var(--secondary-color);
+    border: 2px solid transparent;
+    border-radius: 7px;
+    color: var(--white-color);
+    font-size: var(--medium-font);
+    font-weight: 500;
+    transition: all .6s ease;
+    margin-right: 20px;
+}
+
+.btn:hover{
+    transform: scale(1.1);
 }
 
 /* Estilos del footer */
