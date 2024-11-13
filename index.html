@@ -54,21 +54,70 @@
 
     <main>
         <section class="banner">
-            <div class="banner-text"> 
-                <h5 data-aos="fade-right" data-aos-duration="1400">Con la compra de un Sixpack</h5>
-                <h1 class="title" data-aos="zoom-in-left" data-aos-duration="1400" data-aos-delay="200">LLevá una gratis</h1>
-                <p data-aos="fade-right" data-aos-duration="1400" data-aos-delay="300">En serio, Pagas 5 latas y llevas 6!</p>
-                <div class="main-banner" data-aos="flip-down" data-aos-duration="1400" data-aos-delay="300">
-                    <a href="#" class="btn">Ver opciones</a>
+            <div class="slider-container">
+                <!-- Diapositiva 1: Imagen -->
+                <div class="banner-container">
+                    <div class="banner-text">
+                        <h5 data-aos="fade-right" data-aos-duration="1400">Con la compra de un Sixpack</h5>
+                        <h1 class="title" data-aos="zoom-in-left" data-aos-duration="1400" data-aos-delay="200">LLevá una gratis</h1>
+                        <p data-aos="fade-right" data-aos-duration="1400" data-aos-delay="300">En serio, Pagas 5 latas y llevas 6!</p>
+                    <div class="main-banner" data-aos="flip-down" data-aos-duration="1400" data-aos-delay="300">
+                        <a href="#" class="btn">Ver opciones</a>
+                    </div>
+                </div> 
+                <div class="banner-img" data-aos="zoom-in" data-aos-duration="1400">
+                    <img src="./img/bannerSixpack.png" alt="Sixpack de Cervezas">
                 </div>
-            </div> 
-
-            <div class="banner-img" data-aos="zoom-in" data-aos-duration="1400">
-                <img src="./img/bannerSixpack.png" alt="Sixpack de Cervezas">
             </div>
-        </section>
-    </main>
+    
+            <!-- Diapositiva 2: Imagen -->
+            <div class="banner-container">
+                <div class="banner-text"> 
+                    <h5 data-aos="fade-right" data-aos-duration="1400" data-aos-delay="300">Refresca tu verano</h5>
+                </div> 
+                <div class="banner-img" data-aos="zoom-in" data-aos-duration="1400">
+                    <img src="./img/playa.jpg" alt="Cerveza Corona en la playa">
+                </div>
+            </div>
+            
+            <!-- Diapositiva 3: Video -->
+            <div class="banner-container">
+                <div class="banner-img" data-aos="zoom-in" data-aos-duration="1400">
+                    <video autoplay loop muted>
+                        <source src="./img/SVA_BANNERTVC_1920x480.mp4" type="video/mp4">
+                        Tu navegador no soporta el formato de video.
+                    </video>
+                </div>
+            </div>
+            
+            <!-- Diapositiva 4: Varias imágenes -->
+            <div class="banner-container">
+                <div class="banner-img">
+                    <img src="./img/Whisky1.webp" alt="Whisky J.Walker Black Label">
+                    <img src="./img/whiskyBuchanas.webp" alt="Whisky Buchanas">
+                    <img src="./img/whiskyChivas.webp" alt="Whisky Chivas Regal">
+                    <img src="./img/whiskyJackDaniels.webp" alt="Whisky Jack Daniel">
+                    <img src="./img/whiskyJameson.webp" alt="Whisky Jameson">
+                    <img src="./img/WhiskyOldParr.webp" alt="Whisky OldParr">
+                    <img src="./img/Whisky.webp" alt="Whisky J. Walker Red Label">
+                </div>
+                <div class="banner-text"> 
+                    <h5 data-aos="fade-right" data-aos-duration="1400">Pagá en efectivo y obtén</h5>
+                    <h1 class="title" data-aos="zoom-in-left" data-aos-duration="1400" data-aos-delay="200">10% Off en Whiskies</h1>
+                    <p data-aos="fade-right" data-aos-duration="1400" data-aos-delay="300">Válido hasta agotar stock</p>
+                    <div class="main-banner" data-aos="flip-down" data-aos-duration="1400" data-aos-delay="300">
+                        <a href="#" class="btn">Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         
+        <!-- Botones de navegación del slider -->
+        <button class="slider-btn prev" onclick="moveSlider(-1)">&#10094;</button>
+        <button class="slider-btn next" onclick="moveSlider(1)">&#10095;</button>
+    </section>
+</main>
+
     <footer>
         <a href="index.html" class="logo">
             <img src="./img/LogoMin.png" alt="Logo DLI Market">
