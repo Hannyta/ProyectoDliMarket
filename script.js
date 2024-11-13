@@ -9,6 +9,9 @@ menuToggle.addEventListener("click", () => {
     navMenu.classList.toggle("active");
     const expanded = navMenu.classList.contains("active");
     menuToggle.setAttribute("aria-expanded", expanded);
+    if (expanded) {
+        navMenu.querySelector('a').focus();
+    }
 });
 
 menuClose.addEventListener('click', function () {
