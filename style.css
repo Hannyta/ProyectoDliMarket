@@ -37,7 +37,7 @@ header {
     top: 0;
     right: 0;
     z-index: 1000;
-    padding: 8px 16px;
+    padding: 6px 8px;
     transition: all .50s ease;
 }
 
@@ -177,79 +177,54 @@ section {
     padding: 0 14%;
 }
 
+.swiper-container {
+    width: 100%;
+    height: 60hv;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-flow: nowrap;
+}
+
 .banner {
     position: relative;
     width: 100%;
     height: 60vh;
     background: linear-gradient(rgba(5, 7, 12, 0.15), rgba(5, 7, 12, 0.25));
     background-color: var(--primary-color);
-    margin-top: 124px;
-}
-.slider-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-    overflow: hidden;  /* Para no mostrar lo que está fuera de los límites del contenedor */
-}
-
-/* Contenedor de cada diapositiva */
-.banner-container {
-    flex-shrink: 0;
-    width: 100%; /* Cada diapositiva ocupará el 100% del contenedor */
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    gap: 2rem;
 }
 
-/* Imágenes dentro del slider */
-.banner-img img {
-    width: 100%;
+.swiper-slide {
+    display: flex;  /* Uso de flexbox para distribuir texto y imagen */
+    justify-content: space-between; /* Distribuir los elementos */
+    align-items: center; /* Centrar el contenido verticalmente */
+    padding: 0 2rem;  /* Agregar espacio en los laterales */
+    box-sizing: border-box;
+}
+
+.banner-img {
+    width: 50%; /* Asigna un tamaño adecuado para la imagen */
     height: auto;
     object-fit: cover; /* Para que la imagen cubra el espacio sin deformarse */
 }
 
-/* Estilo para el video */
-.banner-img video {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-/* Contenedor de las múltiples imágenes */
-.banner-img {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
 .banner-img img {
-    width: 32%; /* Para que las imágenes se ajusten dentro del espacio disponible */
-    margin: 1%;
+    width: 100%;
+    object-fit: cover;
+    filter: drop-shadow(0 0 12px #000000);
 }
 
-/* Botones de navegación */
-.slider-btn {
-    position: absolute;
-    top: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    font-size: 30px;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 10;
-}
-
-.slider-btn.prev {
-    left: 0;
-}
-
-.slider-btn.next {
-    right: 0;
-}
-
-.slider-btn:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+.banner-text {
+    width: 50%; /* Controla el ancho del texto */
+    color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .banner-text h1 {
@@ -264,12 +239,10 @@ section {
     font-size: var(--jumbo-font);
     font-weight: 400;
     letter-spacing: 1px;
-    color: var(--secondary-color)
+    color: var(--secondary-color);
 }
 
 .banner-text p {
-    width: 100%;
-    max-width: 620px;
     font-size: var(--large-font);
     font-weight: 400;
     line-height: 32px;

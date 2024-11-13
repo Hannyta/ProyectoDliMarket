@@ -16,28 +16,26 @@ menuClose.addEventListener('click', function () {
     menuToggle.setAttribute('aria-expanded', 'false');
 });
 
-const slides = document.querySelectorAll('.banner-container');
-const totalSlides = slides.length;
-
-const moveSlider = (direction) => {
-    currentSlide += direction; // Aumentar o disminuir el índice de la diapositiva actual
-
-    // Si el índice es menor que 0, volvemos a la última diapositiva
-    if (currentSlide < 0) {
-        currentSlide = totalSlides - 1; // Volver a la última diapositiva
-    } else if (currentSlide >= totalSlides) {
-        currentSlide = 0; // Volver a la primera diapositiva
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
     }
+});
 
-    // Desplazamos el slider
-    document.querySelector('.slider-container').style.transform = `translateX(-${currentSlide * 100}%)`;
-};
-
-// Asignar los eventos para los botones de navegación
-document.querySelector('.slider-btn.prev').addEventListener('click', () => moveSlider(-1)); // Navegar hacia la izquierda
-document.querySelector('.slider-btn.next').addEventListener('click', () => moveSlider(1));  // Navegar hacia la derecha
-
-// Automatizar el cambio de diapositivas cada 5 segundos
-setInterval(() => {
-    moveSlider(1);  // Cambiar a la siguiente diapositiva cada 5 segundos
-}, 5000);  // 5000 ms = 5 segundos
+var swiper = new Swiper('.swiper-container', { 
+    loop: true, 
+    pagination: { 
+        el: '.swiper-pagination', 
+        clickable: true, 
+    }, 
+    navigation: { 
+        nextEl: '.swiper-button-next', 
+        prevEl: '.swiper-button-prev', 
+    }, 
+    autoplay: {
+         delay: 5000,
+        },
+        centeredSlides: true,
+        slidesPerView: 1,
+    });
