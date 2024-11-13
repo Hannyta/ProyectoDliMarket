@@ -26,7 +26,7 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
-var swiper = new Swiper('.swiper-container', { 
+const swiper = new Swiper('.swiper-container', { 
     loop: true, 
     pagination: { 
         el: '.swiper-pagination', 
@@ -37,7 +37,8 @@ var swiper = new Swiper('.swiper-container', {
         prevEl: '.swiper-button-prev', 
     }, 
     autoplay: {
-         delay: 5000,
+         delay: 2000,
+         pauseOnMouseEnter: true,
         },
         centeredSlides: true,
         slidesPerView: 1,
