@@ -13,3 +13,27 @@ menuClose.addEventListener('click', function () {
     navMenu.classList.remove('active');
     menuToggle.setAttribute('aria-expanded', 'false');
 });
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+    }
+});
+
+var swiper = new Swiper('.swiper-container', { 
+    loop: true, 
+    pagination: { 
+        el: '.swiper-pagination', 
+        clickable: true, 
+    }, 
+    navigation: { 
+        nextEl: '.swiper-button-next', 
+        prevEl: '.swiper-button-prev', 
+    }, 
+    autoplay: {
+         delay: 5000,
+        },
+        centeredSlides: true,
+        slidesPerView: 1,
+    });
