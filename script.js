@@ -1,5 +1,3 @@
-let currentSlide = 0;
-
 const menuToggle = document.getElementById("menu-toggle");
 const navMenu = document.getElementById("nav-menu");
 const menuClose = document.getElementById('menu-close');
@@ -26,8 +24,10 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
-const swiper = new Swiper('.swiper-container', { 
+let swiperBanner = new Swiper('.swiper-container', { 
     loop: true, 
+    spaceBetween: 32,
+
     pagination: { 
         el: '.swiper-pagination', 
         clickable: true, 
@@ -40,6 +40,5 @@ const swiper = new Swiper('.swiper-container', {
          delay: 2000,
          pauseOnMouseEnter: true,
         },
-        centeredSlides: true,
         slidesPerView: 1,
     });
