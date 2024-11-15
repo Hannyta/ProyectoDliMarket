@@ -6,20 +6,19 @@ const navAccount = document.querySelector('.navlist-account');
 // Función para verificar el tamaño de pantalla y actualizar el menú
 const checkScreenSize = () => {
     if (window.innerWidth >= 1024) {
-        // Pantallas grandes: mostrar menú como barra horizontal fija
+        
         navMenu.classList.add("active");
-        menuToggle.style.display = "none"; // Oculta botón hamburguesa
-        menuClose.style.display = "none"; // Oculta botón de cierre
-        if (navAccount) navAccount.style.display = "none"; // Oculta enlace "Mi cuenta"
+        menuToggle.style.display = "none"; 
+        menuClose.style.display = "none";
+        if (navAccount) navAccount.style.display = "none"; 
     } else {
-        // Pantallas pequeñas: activar menú desplegable
         navMenu.classList.remove("active");
-        menuToggle.style.display = "block"; // Muestra botón hamburguesa
-        if (navAccount) navAccount.style.display = "block"; // Muestra enlace "Mi cuenta"
+        menuToggle.style.display = "block";
+        menuClose.style.display = "block";
+        if (navAccount) navAccount.style.display = "block";
     }
 };
 
-// Ejecutamos la función al cargar la página y al redimensionar la ventana
 window.addEventListener("resize", checkScreenSize);
 checkScreenSize();
 
@@ -29,8 +28,13 @@ menuToggle.addEventListener("click", () => {
     const expanded = navMenu.classList.contains("active");
     menuToggle.setAttribute("aria-expanded", expanded);
     if (expanded) {
-        navMenu.querySelector('a').focus(); // Enfoca el primer enlace del menú
+        navMenu.querySelector('a').focus();
     }
+});
+
+menuClose.addEventListener('click', () => {
+    navMenu.classList.remove("active"); // Cierra el menú
+    menuToggle.setAttribute("aria-expanded", "false"); // Actualiza el estado de expansión
 });
 
 // Swiper para el banner
