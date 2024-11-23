@@ -55,3 +55,23 @@ let swiperBanner = new Swiper('.swiper-container', {
     },
     slidesPerView: 1,
 });
+
+const $form = document.querySelector('#form');
+
+$form.addEventListener('submit', handleSubmit)
+
+async function handleSubmit(event) {
+    event.preventDefault()
+    const form = new FormData(this)
+    fetch(this.action, {
+        method: this.method,
+        body: form, 
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    if (Response.ok) {
+        this.reset()
+        alert('Gracias por contactarnos, en breve atenderemos su mensaje');
+    }
+}
