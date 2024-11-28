@@ -56,22 +56,24 @@ let swiperBanner = new Swiper('.swiper-container', {
     slidesPerView: 1,
 });
 
-const $form = document.querySelector('#form');
+const $form = document.querySelector('#form')
 
-$form.addEventListener('submit', handleSubmit)
-
-async function handleSubmit(event) {
-    event.preventDefault()
-    const form = new FormData(this)
-    fetch(this.action, {
+$form.addEventListener('submit', async function handleSubmit(event) {
+    event.preventDefault();
+    const form = new FormData(this);
+    console.log("Datos enviados:", Object.fromEntries(form)); // Muestra los datos en consola
+    const response = await fetch(this.action, {
         method: this.method,
-        body: form, 
+        body: form,
         headers: {
-            'Accept': 'application/json'
-        }
-    })
-    if (Response.ok) {
-        this.reset()
-        alert('Gracias por contactarnos, en breve atenderemos su mensaje');
+            "Accept": "application/json",
+        },
+    });
+
+    if (response.ok) {
+        this.reset();
+        alert("Gracias por contactarnos, en breve atenderemos su mensaje.");
+    } else {
+        alert("Hubo un problema al enviar el formulario, intenta nuevamente.");
     }
-}
+});

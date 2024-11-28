@@ -34,7 +34,7 @@
             <a href="#" aria-label="Buscar"><i class="bx bx-search"></i></a>
             <a href="#" aria-label="Mi cuenta"><i class="bx bxs-user-circle"></i></a>
             <a href="#" aria-label="Carrito de compras"><i class="bx bxs-shopping-bags"></i></a>
-            <a href="#" aria-label="Menú" id="menu-toggle"><i class="bx bx-menu"></i></a>
+            <a href="#" aria-label="Abrir menú principal" id="menu-toggle"><i class="bx bx-menu"></i></a>
         </div>
         <nav id="nav-menu" aria-label="Menú principal">
             <div class="menu-close" id="menu-close">
@@ -105,146 +105,29 @@
         <section id="products" class="products">
             <h1 class="heading"> Promociones</h1>
             
-            <div class="box-container">
-
-                <div class="box">
-                    <span class="discount">-10%</span>
-                    <div class="image">
-                        <img src="/img/Product/AmstelSixpack.png" alt="">
+            <div class="card">
+                <div class="card-container">
+                    <div class="card-img">
+                        <img src="./img/Product/AmstelSixpack.png" alt="Sixpack lata Amstel">
                     </div>
-                    <div class="content">
-                        <h3>Sixpack de cerveza Amstel 473ml</h3>
-                        <div class="price"> $8.900 <span>$10.200</span></div>
+                    <span class="card-discount">-10%</span>
+                    <div class="card-leftLabel">
+                        <span class="leftLabel-category">LAGER</span>
+                        <span class="leftLabel-sub-category">RUBIA</span>
+                        <span class="leftLabel-weight">473 ml</span>
                     </div>
-                    <div class="card-btn">
-                        <button class="btn">
-                            <i class='bx bx-cart'></i>
-                            Agregar al carrito
-                        </button>
-                    </div>
-                </div>
-                <div class="box">
-                    <span class="discount">-15%</span>
-                    <div class="image">
-                        <img src="/img/Product/HeineikenSixPack.png" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>Sixpack de cerveza Heineiken 473ml</h3>
-                        <div class="price"> $12.200 <span>$14.700</span></div>
-                    </div>
-                    <div class="card-btn">
-                        <button class="btn">
-                            <i class='bx bx-cart'></i>
-                            Agregar al carrito
-                        </button>
-                    </div>
-                </div>
-                <div class="box">
-                    <span class="discount">-15%</span>
-                    <div class="image">
-                        <img src="/img/Product/ImperialGoldenSixPack.png" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>Sixpack de cerveza Imperial golden 473ml</h3>
-                        <div class="price"> $9.500 <span>$11.400</span></div>
-                    </div>
-                    <div class="card-btn">
-                        <div class="card-btn">
-                            <button class="btn">
-                                <i class='bx bx-cart'></i>
-                                Agregar al carrito
-                            </button>
+                    <div class="card-texts">
+                        <a href="" class="card-icon">
+                            <i class="ri-heart-3-line"></i>
+                        </a>
+                        <div>
+                            <span class="card-name">Sixpack lata Amstel 473 ml</span>
+                            <span class="card-preci card-preci--before">$990</span>
+                            <span class="card-preci card-preci--now">$749</span>
                         </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <span class="discount">-18%</span>
-                    <div class="image">
-                        <img src="/img/Product/sixpackCaorona.png" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>Sixpack de corona 330ml</h3>
-                        <div class="price"> $12.600 <span>$15.300</span></div>
-                    </div>
-                    <div class="card-btn">
-                        <div class="card-btn">
-                            <button class="btn">
-                                <i class='bx bx-cart'></i>
-                                Agregar al carrito
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <span class="discount">-10% en efectivo</span>
-                    <div class="image">
-                        <img src="/img/Product/santat.png" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>Ron Santa Teresa Gran Reserva 750ml</h3>
-                        <div class="price"> $33.000 <span>$29.000</span></div>
-                    </div>
-                    <div class="card-btn">
-                        <div class="card-btn">
-                            <button class="btn">
-                                <i class='bx bx-cart'></i>
-                                Agregar al carrito
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <span class="discount">-10% en efectivo</span>
-                    <div class="image">
-                        <img src="/img/Product/buchanas.png" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>Whisky Buchanan's 12 años 750ml</h3>
-                        <div class="price"> $54.300 <span>$48.800</span></div>
-                    </div>
-                    <div class="card-btn">
-                        <div class="card-btn">
-                            <button class="btn">
-                                <i class='bx bx-cart'></i>
-                                Agregar al carrito
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <span class="discount">-18%</span>
-                    <div class="image">
-                        <img src="/img/Product/StellaSixPac.png" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>Sixpack de Stella Artois Sin Alchohol 473ml</h3>
-                        <div class="price"> $9.500 <span>$11.400</span></div>
-                    </div>
-                    <div class="card-btn">
-                        <div class="card-btn">
-                            <button class="btn">
-                                <i class='bx bx-cart'></i>
-                                Agregar al carrito
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <span class="discount">-10% en efectivo</span>
-                    <div class="image">
-                        <img src="/img/Product/oldparr.png" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>Whisky Old Parr 700ml</h3>
-                        <div class="price"> $41.850 <span>$37.600</span></div>
-                    </div>
-                    <div class="card-btn">
-                        <div class="card-btn">
-                            <button class="btn">
-                                <i class='bx bx-cart'></i>
-                                Agregar al carrito
-                            </button>
-                        </div>
+                        <a href="" class="card-icon">
+                            <i class="ri-shopping-cart-2-line"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -314,13 +197,13 @@
             <h1 class="heading"> ¡<span>Contáctenos</span>!</h1>
 
             <div class="row">
-                <form id="form"
+                <form id="form" class="form"
                     action="https://formspree.io/f/xjkvorla"
-                    method="post"
+                    method="POST"
                 >
-                    <input type="text" placeholder="Nombre" id="name" class="box" required>
-                    <input type="email" placeholder="Email" id="email" class="box" required>
-                    <input type="number" placeholder="Teléfono" id="phone" class="box" required>
+                    <input type="text" name="name" placeholder="Nombre" id="name" class="box" required>
+                    <input type="email" name="email" placeholder="Email" id="email" class="box" required>
+                    <input type="number" name="phone" placeholder="Teléfono" id="phone" class="box" required>
                     <textarea name="mensaje" class="box" placeholder="Escribe tu mensaje" id="message" cols="30" rows="10"></textarea>
                     <button type="submit" class="btn">Enviar mensaje</button>
                 </form>
