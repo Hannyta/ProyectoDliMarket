@@ -547,13 +547,13 @@ footer iframe:hover {
 .products {
     margin: 3rem;
     padding: 2rem;
-}
-
-.products h1 {
-    font-family: "Raleway", serif;
-    font-size: var(--jumbo-font);
-    color: var(--dark-color);
-    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    max-width: 1200px;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    align-items: center;
+    gap: 2rem;
 }
 
 .products img {
@@ -562,18 +562,6 @@ footer iframe:hover {
 }
 
 .card {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    max-width: 1200px;
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
-    align-items: center;
-    gap: 2rem;
-    margin-top: 2rem;
-    border-radius: 1rem;
-}
-
-.card-container {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -596,8 +584,8 @@ footer iframe:hover {
     padding: .5rem 1rem;
     font-size: var(--small-font);
     font-weight: bold;
-    color: var(--tertiary-color);
-    background: var(--light-gray);
+    color: var(--white-color);
+    background: var(--tertiary-color);
     z-index: 1;
     border-radius: .5rem;
 }
@@ -629,13 +617,21 @@ footer iframe:hover {
     line-height: 1.2;
 }
 
-.card-leftLabel .leftLabel-weight {
+.leftLabel-weight {
     writing-mode: horizontal-tb;
-    transform: rotate(0deg);
-    font-size: 1rem;
+    transform: rotate(180deg); 
+    font-size: 1rem; 
     font-weight: bold;
-    margin-top: auto; /* Asegura que quede al final */
-    text-align: center;
+    color: #000; 
+    text-align: left;
+    padding: 0.5rem;
+    border: 2px solid var(--secondary-color);
+    border-radius: 0.5rem; 
+    background-color: #fff; 
+    width: fit-content; 
+    margin: 0 auto;
+    position: relative; 
+    z-index: 2;
 }
 
 .card-icon {
@@ -706,35 +702,9 @@ footer iframe:hover {
     padding: 0 1.5rem;
 }
 
-@media (max-width: 1024px) {
-    /* 3 tarjetas por fila */
-    .products .box-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .products .box-container .box .content h3 {
-        font-size: var(--large-font);
-        margin-bottom: 0.1rem;
-    }
-}
-
-@media (max-width: 768px) {
-    /* 2 tarjetas por fila */
-    .products .box-container {
-        grid-template-columns: repeat(2, 1fr); 
-    }
-    .products .box-container .box .content h3 {
-        font-size: var(--xlarge-font);
-        margin-bottom: 0.1rem;
-    }
-}
-
-@media (max-width: 480px) {
-
-    /* 1 tarjeta por fila */
-    .products .box-container {
-        grid-template-columns: 1fr; 
-    }
-    .products h1 {
-        font-size: var(--xlarge-font);
+@media screen and (min-width: 1200px) {
+    .products {
+        margin-right: auto;
+        margin-left: auto;
     }
 }
