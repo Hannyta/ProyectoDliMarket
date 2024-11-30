@@ -581,7 +581,7 @@ footer iframe:hover {
 .card-discount {
     position: absolute;
     top: 1rem; left: 1rem;
-    padding: .5rem 1rem;
+    padding: .3rem 1rem;
     font-size: var(--small-font);
     font-weight: bold;
     color: var(--white-color);
@@ -599,6 +599,7 @@ footer iframe:hover {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     text-align: center;
+    align-content: center;
     background: linear-gradient(135deg, var(--primary-color) 70%, var(--secondary-color) 100%);
     color: var(--light-gray);
     font-weight: bold;
@@ -610,7 +611,7 @@ footer iframe:hover {
 }
 
 .card-leftLabel span {
-    margin: 0.5rem 0;
+    margin: 0;
     font-size: 0.85rem;
     text-transform: uppercase;
     display: block;
@@ -618,20 +619,20 @@ footer iframe:hover {
 }
 
 .leftLabel-weight {
-    writing-mode: horizontal-tb;
-    transform: rotate(180deg); 
+    position: absolute;
+    bottom: 0.8rem; left: 0.09rem;
+    padding: .3rem 1rem;
+    border-radius: .5rem;
     font-size: 1rem; 
     font-weight: bold;
     color: #000; 
     text-align: left;
-    padding: 0.5rem;
+    padding: 0.3rem;
     border: 2px solid var(--secondary-color);
     border-radius: 0.5rem; 
-    background-color: #fff; 
+    background-color: #ffffff49; 
     width: fit-content; 
-    margin: 0 auto;
-    position: relative; 
-    z-index: 2;
+    z-index: 1;
 }
 
 .card-icon {
@@ -698,7 +699,7 @@ footer iframe:hover {
 }
 
 .card:hover .card-texts {
-    margin-left: 3.5rem;
+    margin-left: 2rem;
     padding: 0 1.5rem;
 }
 
