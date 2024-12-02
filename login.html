@@ -20,7 +20,7 @@
 <body>
     <main>
         <section class="login">
-            <div class="login-container">
+            <div class="container">
 
                 <div class="container-form">
                     <form class="sign-in">
@@ -41,7 +41,7 @@
                             <input type="password" placeholder="Contraseña">
                         </div>
                         <a href="a">¿Olvidaste tu contraseña?</a>
-                        <button class="btn">INICIAR SESION</button>
+                        <button class="button">INICIAR SESION</button>
                     </form>
                 </div>
                 <div class="container-form">
@@ -56,7 +56,7 @@
                         <span>Use su correo electrónico para registrarse</span>
                         <div class="container-input">
                             <i class="ri-user-3-line"></i>
-                            <input type="text" placeholder="Email">
+                            <input type="text" placeholder="Nombre">
                         </div>
                         <div class="container-input">
                             <i class="ri-mail-line"></i>
@@ -66,14 +66,25 @@
                             <i class="ri-lock-line"></i>
                             <input type="password" placeholder="Contraseña">
                         </div>
-                        <a href="a">¿Olvidaste tu contraseña?</a>
-                        <button class="btn">INICIAR SESION</button>
+                        <button class="button">REGISTRARSE</button>
                     </form>
+                </div>
+                <div class="container-welcome">
+                    <div class="welcome-sign-up welcome">
+                        <h3>¡Bienvenido!</h3>
+                        <p>Ingrese sus datos personales para usar todas las funciones del sitio</p>
+                        <button class="button" id="btn-sign-up">Registrarse</button>
+                    </div>
+                    <div class="welcome-sign-in welcome">
+                        <h3>¡Hola!</h3>
+                        <p>Registrese con sus datos personales para usar todas las funciones del sitio</p>
+                        <button class="button" id="btn-sign-in">Iniciar sesión</button>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <script src="./style.js"></script>
+    <script async src="./login.js"></script>
 </body>
 </html>

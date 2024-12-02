@@ -1,5 +1,5 @@
-const menuToggle = document.getElementById("menu-toggle");
-const navMenu = document.getElementById("nav-menu");
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
 const menuClose = document.getElementById('menu-close');
 const navAccount = document.querySelector('.navlist-account');
 
