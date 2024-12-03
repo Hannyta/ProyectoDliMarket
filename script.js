@@ -2,6 +2,22 @@ const menuToggle = document.getElementById('menu-toggle');
 const navMenu = document.getElementById('nav-menu');
 const menuClose = document.getElementById('menu-close');
 const navAccount = document.querySelector('.navlist-account');
+const yesButton = document.getElementById('yesButton');
+const noButton = document.getElementById('noButton');
+
+if (!localStorage.getItem('ageVerified')) { 
+    ageModal.style.display = 'block'; 
+} else { 
+    ageModal.style.display = 'none'; 
+}
+
+yesButton.addEventListener('click', () => { 
+    document.getElementById('ageModal').style.display = 'none'; 
+}); 
+
+noButton.addEventListener('click', () => {
+     alert('Debes ser mayor de edad para ingresar a este sitio.'); window.location.href = 'https://www.google.com'; 
+});
 
 // Función para verificar el tamaño de pantalla y actualizar el menú
 const checkScreenSize = () => {
