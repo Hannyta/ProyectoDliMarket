@@ -64,6 +64,28 @@ header a:hover i {
     color: var(--white-color);
 }
 
+.header-search {
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.header-search input {
+    padding: 7px 15px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-size: var(--small-font);
+    margin-right: 10px;
+    width: 150px;
+    background-color: var(--light-gray);
+    transition: 0.3s ease;
+}
+
+.header-search input:hover {
+    width: 200px;
+}
+
 .logo img {
     max-width: 120px;
     height: auto;
@@ -498,12 +520,14 @@ nav.active {
     height: 45px;
     font-size: var(--medium-font);
     border: 1px solid var(--secondary-color);
-    border-radius: 5px;
+    border-radius: 7px;
     background-color: var(--primary-color);
     color: var(--white-color);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .modal-content button:hover {
+    transform: scale(1.1);
     background-color: var(--tertiary-color);
 }
 
@@ -762,6 +786,7 @@ footer iframe:hover {
         margin-left: auto;
     }
 }
+
 .login {
     width: 100%;
     height: 100vh;
@@ -771,7 +796,7 @@ footer iframe:hover {
     font-family: "Beiruti", serif;
 }
 
-.container {
+.login .container {
     width: 800px;
     height: 500px;
     display: flex;
@@ -781,12 +806,12 @@ footer iframe:hover {
     box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
 }
 
-.container-form {
+.login .container-form {
     width: 100%;
     overflow: hidden;
 }
 
-.container-form form {
+.login .container-form form {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -795,31 +820,40 @@ footer iframe:hover {
     transition: transform 0.5s ease-in;
 } 
 
-.container-form h2 {
+.login .container-form h2 {
     font-family: "Raleway", serif;
     font-size: var(--jumbo-font);
     margin-bottom: 2rem;
 }
 
-.social-networks {
+.login .social-networks {
     display: flex;
     gap: 1rem;
     margin-bottom: 1.5rem;
 }
 
-.social-networks i {
+.login .social-networks i {
     border: 1px solid var(--dark-color-80);
     border-radius: .5rem;
     padding: 8px;
     cursor: pointer;
+    transition: all .3s ease;
 }
 
-.container-form span {
+.login .social-networks i:hover {
+    background: var(--secondary-color);
+    border-radius: 40%;
+    transform: scale(1.6);
+    color: var(--white-color-80);
+    border: 1px solid var(--primary-color);
+}
+
+.login .container-form span {
     font-size: var(--small-font);
     margin-bottom: 1rem;
 }
 
-.container-input {
+.login .container-input {
     width: 300px;
     height: 40px;
     margin-bottom: 10px;
@@ -831,7 +865,7 @@ footer iframe:hover {
     background-color: var(--light-gray);
 }
 
-.container-input input {
+.login .container-input input {
     border: none;
     outline: none;
     width: 100%;
@@ -839,26 +873,33 @@ footer iframe:hover {
     background-color: inherit;
 }
 
-.container-form a {
-    color: var(--dark-color);
+.login .container-form a {
+    color: var(--primary-color);
     font-size: var(--medium-font);
+    font-weight: 500;
     margin-bottom: 20px;
     margin-top: 5px;
 }
 
-.button {
+.login .button {
     width: 170px;
     height: 45px;
     font-size: var(--medium-font);
-    border: none;
-    border-radius: 5px;
+    border: 2px solid var(--white-color);
+    border-radius: 7px;
     cursor: pointer;
     margin-top: 10px;
     background-color: var(--secondary-color);
     color: var(--white-color);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.sign-up {
+.login .button:hover {
+    transform: scale(1.1);
+    background-color: var(--tertiary-color);
+}
+
+.login .sign-up {
     transform: translateX(-100%);
 }
 
@@ -922,4 +963,94 @@ footer iframe:hover {
 
 .container.toggle .welcome-sign-up {
     transform: translateX(-100%);
+}
+
+.forgotPassword {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Beiruti", serif;
+}
+
+.forgotPassword .container {
+    width: 800px;
+    height: 500px;
+    display: flex;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
+}
+
+.forgotPassword .container-form {
+    width: 100%;
+    overflow: hidden;
+}
+
+.forgotPassword .container-form form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in;
+} 
+
+.forgotPassword .container-form h2 {
+    font-family: "Raleway", serif;
+    font-size: var(--large-font);
+    margin-bottom: 2rem;
+}
+
+.forgotPassword .container-form span {
+    font-size: var(--medium-font);
+    margin-bottom: 1.5rem;
+}
+
+.forgotPassword .container-input {
+    width: 400px;
+    height: 40px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 0 15px;
+    background-color: var(--light-gray);
+}
+
+.forgotPassword .container-input input {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+}
+
+.forgotPassword .container-form a {
+    color: var(--primary-color);
+    font-size: var(--small-font);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.forgotPassword .button {
+    width: 270px;
+    height: 45px;
+    font-size: var(--medium-font);
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.forgotPassword .button:hover {
+    transform: scale(1.1);
+    background-color: var(--tertiary-color);
 }
