@@ -59,7 +59,8 @@ let swiperBanner = new Swiper('.swiper-container', {
     spaceBetween: 32,
     pagination: { 
         el: '.swiper-pagination', 
-        clickable: true, 
+        clickable: true,
+        dynamicBullets: true,
     }, 
     navigation: { 
         nextEl: '.swiper-button-next', 
@@ -93,3 +94,38 @@ $form.addEventListener('submit', async function handleSubmit(event) {
         alert("Hubo un problema al enviar el formulario, intenta nuevamente.");
     }
 });
+
+
+const cart = [
+    { id: 1, name: "Producto A", price: 100, quantity: 1 },
+    { id: 2, name: "Producto B", price: 200, quantity: 2 },
+  ];
+
+  function renderCart() {
+    const cartItems = document.getElementById("cart-items");
+    const cartTotal = document.getElementById("cart-total");
+    cartItems.innerHTML = "";
+    let total = 0;
+
+    cart.forEach((item) => {
+      total += item.price * item.quantity;
+      cartItems.innerHTML += `
+        <li>
+          ${item.name} - $${item.price} x ${item.quantity}
+          <button onclick="removeItem(${item.id})">Eliminar</button>
+        </li>
+      `;
+    });
+
+    cartTotal.innerText = total.toFixed(2);
+  }
+
+  function removeItem(id) {
+    const index = cart.findIndex((item) => item.id === id);
+    if (index !== -1) {
+      cart.splice(index, 1);
+      renderCart();
+    }
+  }
+
+  renderCart();

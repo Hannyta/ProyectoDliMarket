@@ -64,6 +64,20 @@ header a:hover i {
     color: var(--white-color);
 }
 
+header .cart-counter {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    background-color: var(--tertiary-color);
+    justify-content: center;
+    align-items: center;
+    color: var(--white-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    font-size: 12px;
+}
+
 .header-search {
     display: flex;
     align-items: center;
@@ -1053,4 +1067,8 @@ footer iframe:hover {
 .forgotPassword .button:hover {
     transform: scale(1.1);
     background-color: var(--tertiary-color);
+}
+
+.shopping-Cart {
+    
 }
