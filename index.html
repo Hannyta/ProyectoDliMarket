@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Descripción meta para mejorar el SEO -->
+    <meta name="description" content="DLI Market - Tu tienda de bebidas y snacks favoritos.">
+
     <title>DLI Market</title>
     <link rel="stylesheet" href="style.css">
 
@@ -15,11 +18,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Beiruti:wght@200..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <!-- Animación para los textos AOS -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
     <!-- Swiper.js para los slider del banner -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!-- Link para el Favicon -->
+    <link rel="icon" type="image/ico" href="img/favicon.ico">
     
 </head>
 <body>
@@ -28,21 +31,33 @@
             <img src="./img/LogoDLI.png" alt="Logo DLI Market">
         </a>
         <div class="header-content">
-            <a href="#" aria-label="Buscar"><i class="bx bx-search"></i></a>
-            <a href="#" aria-label="Mi cuenta"><i class="bx bxs-user-circle"></i></a>
-            <a href="#" aria-label="Carrito de compras"><i class="bx bxs-shopping-bags"></i></a>
-            <a href="#" aria-label="Menú" id="menu-toggle"><i class="bx bx-menu"></i></a>
+            <div class="header-search">
+                <input type="text" placeholder="Search...">
+                <a href="#" aria-label="Buscar">
+                    <i class="bx bx-search"></i>
+                </a>
+            </div>
+            <a href="./login.html" aria-label="Mi cuenta">
+                <i class="bx bxs-user-circle"></i>
+            </a>
+            <a href="#" aria-label="Carrito de compras">
+                <i class="bx bxs-shopping-bags"></i>
+                <span class="cart-counter">0</span>
+            </a>
+            <a href="#" aria-label="Abrir menú hamburguesa" id="menu-toggle">
+                <i class="bx bx-menu"></i>
+            </a>
         </div>
-        <nav id="nav-menu" aria-label="Menú principal">
+        <nav id="nav-menu" aria-label="Cerrar menú hamburguesa">
             <div class="menu-close" id="menu-close">
                 <i class="bx bx-x"></i>
             </div>
             <div class="navlist-account">
                     <i class='bx bxs-user-circle icons'></i>
-                    <a href="#">Mi cuenta</a>
+                    <a href="./login.html">Mi cuenta</a>
             </div>
             <ul class="navlist">
-                <li><a href="#">Promociones</a></li>
+                <li><a href="#products">Promociones</a></li>
                 <li><a href="#">Cervezas</a></li>
                 <li><a href="#">Espumantes</a></li>
                 <li><a href="#">Sin Alcohol</a></li>
@@ -56,48 +71,286 @@
     </header>
     
     <main>
-        <section class="banner">
+        <section id="banner" class="banner">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="banner-cont">
                             <img class="banner-img" src="./img/1.png" alt="Banner">
-                            <a href="#" class="banner-btn" data-aos="zoom-in" data-aos-duration="1400">Comprar</a>
+                            <a href="#" class="banner-btn">Comprar</a>
                         </div>
 
                     </div>
                     <div class="swiper-slide">
                         <div class="banner-cont">
                             <img class="banner-img" src="./img/2.png" alt="Banner">
-                            <a href="#" class="banner-btn" data-aos="zoom-in" data-aos-duration="1400">Ver más</a>
+                            <a href="#" class="banner-btn">Ver más</a>
                         </div>
 
                     </div>
                     <div class="swiper-slide">
                         <div class="banner-cont">
                             <img class="banner-img" src="./img/3.png" alt="Banner">
-                            <a href="#" class="banner-btn" data-aos="zoom-in" data-aos-duration="1400">Ver más</a>
+                            <a href="#" class="banner-btn btn" data-aos="zoom-in" data-aos-duration="1400">Ver más</a>
                         </div>
 
                     </div>
                     <div class="swiper-slide">
                         <div class="banner-cont">
                             <img class="banner-img" src="./img/4.png" alt="Banner">
-                            <a href="#" class="banner-btn" data-aos="zoom-in" data-aos-duration="1400">Ver más</a>
+                            <a href="#" class="banner-btn">Ver más</a>
                         </div>
 
                     </div>
                     <div class="swiper-slide">
                         <div class="banner-cont">
                             <img class="banner-img" src="./img/5.png" alt="Banner">
-                            <a href="#" class="banner-btn" data-aos="zoom-in" data-aos-duration="1400">Ver más</a>
+                            <a href="#" class="banner-btn">Ver más</a>
                         </div>
                     </div>
-                    
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div> 
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div> 
+                    <div class="swiper-button-next"></div>
+            </div>
+        </section>
+        <section id="products" class="products">
+            
+            <article class="card">
+                <div class="card-container">
+                    <div class="card-img">
+                        <img src="./img/Product/AmstelSixpack.png" alt="Sixpack lata Amstel">
+                    </div>
+                    <span class="card-discount">-17%</span>
+                    <div class="card-leftLabel">
+                        <span class="leftLabel-category">LAGER</span>
+                        <span class="leftLabel-sub-category">RUBIA</span>
+                    </div>
+                    <span class="leftLabel-weight">473 ml</span>
+                    <div class="card-texts">
+                        <a href="" class="card-icon">
+                            <i class="ri-heart-3-line"></i>
+                        </a>
+                        <div>
+                            <span class="card-name">Sixpack lata Amstel 473 ml</span>
+                            <span class="card-preci card-preci--before">$10.200</span>
+                            <span class="card-preci card-preci--now">$8.400</span>
+                        </div>
+                        <a href="" class="card-icon">
+                            <i class="ri-shopping-cart-2-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-container">
+                    <div class="card-img">
+                        <img src="./img/Product/AndesIpaSixpack.png" alt="Sixpack lata Andes Ipa">
+                    </div>
+                    <span class="card-discount">-17%</span>
+                    <div class="card-leftLabel">
+                        <span class="leftLabel-category">IPA</span>
+                        <span class="leftLabel-sub-category"></span>
+                    </div>
+                    <span class="leftLabel-weight">473 ml</span>
+                    <div class="card-texts">
+                        <a href="" class="card-icon">
+                            <i class="ri-heart-3-line"></i>
+                        </a>
+                        <div>
+                            <span class="card-name">Sixpack lata Andes Ipa 473 ml</span>
+                            <span class="card-preci card-preci--before">$12.600</span>
+                            <span class="card-preci card-preci--now">$10.400</span>
+                        </div>
+                        <a href="" class="card-icon">
+                            <i class="ri-shopping-cart-2-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-container">
+                    <div class="card-img">
+                        <img src="./img/Product/BrahmaSixpack.png" alt="Sixpack lata Brahma">
+                    </div>
+                    <span class="card-discount">-17%</span>
+                    <div class="card-leftLabel">
+                        <span class="leftLabel-category">LAGER</span>
+                        <span class="leftLabel-sub-category">RUBIA</span>
+                    </div>
+                    <span class="leftLabel-weight">473 ml</span>
+                    <div class="card-texts">
+                        <a href="" class="card-icon">
+                            <i class="ri-heart-3-line"></i>
+                        </a>
+                        <div>
+                            <span class="card-name">Sixpack lata Brahma 473 ml</span>
+                            <span class="card-preci card-preci--before">$9.600</span>
+                            <span class="card-preci card-preci--now">$7.900</span>
+                        </div>
+                        <a href="" class="card-icon">
+                            <i class="ri-shopping-cart-2-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-container">
+                    <div class="card-img">
+                        <img src="./img/Product/HeineikenSixPack.png" alt="Sixpack lata Heineiken 473 ml">
+                    </div>
+                    <span class="card-discount">-18%</span>
+                    <div class="card-leftLabel">
+                        <span class="leftLabel-category">LAGER</span>
+                        <span class="leftLabel-sub-category">RUBIA</span>
+                    </div>
+                    <span class="leftLabel-weight">473 ml</span>
+                    <div class="card-texts">
+                        <a href="" class="card-icon">
+                            <i class="ri-heart-3-line"></i>
+                        </a>
+                        <div>
+                            <span class="card-name">Sixpack lata Heineiken 473 ml</span>
+                            <span class="card-preci card-preci--before">$15.600</span>
+                            <span class="card-preci card-preci--now">$12.700</span>
+                        </div>
+                        <a href="" class="card-icon">
+                            <i class="ri-shopping-cart-2-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-container">
+                    <div class="card-img">
+                        <img src="./img/Product/sixpackCaorona.png" alt="Sixpack Corona 330 ml">
+                    </div>
+                    <span class="card-discount">-17%</span>
+                    <div class="card-leftLabel">
+                        <span class="leftLabel-category">LAGER</span>
+                        <span class="leftLabel-sub-category">RUBIA</span>
+                    </div>
+                    <span class="leftLabel-weight">330 ml</span>
+                    <div class="card-texts">
+                        <a href="" class="card-icon">
+                            <i class="ri-heart-3-line"></i>
+                        </a>
+                        <div>
+                            <span class="card-name">Sixpack corona 330 ml</span>
+                            <span class="card-preci card-preci--before">$16.500</span>
+                            <span class="card-preci card-preci--now">$13.600</span>
+                        </div>
+                        <a href="" class="card-icon">
+                            <i class="ri-shopping-cart-2-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section id="cart" class="cart">
+            <article class="cart-container">
+                <h1>Shopping Cart</h1>
+                <div class="listCart">
+                    <ul id="cartItems">
+
+                    </ul>
+                    <div class="summary">
+                        <p>
+                            Total: $
+                            <span id="cartTotal">
+                                0.00
+                            </span>
+                        </p>
+                        <button id="checkout">
+                            Finalizar Compra
+                        </button>
+                    </div>
+                </div>
+            </article> 
+        </section>
+        <section id="review" class="review">
+            <h1 class="heading"> Nuestros clientes <span>review</span></h1>
+
+            <div class="swiper-container box-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide box">
+                        <div class="stars">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic sapiente suscipit ut? Reiciendis exercitationem impedit, saepe architecto aperiam, illo quidem laboriosam possimus maxime, earum sapiente. Iusto perspiciatis ipsam praesentium sit.</p>
+                        <div class="user">
+                            <img src="./img/person1.jpg" alt="">
+                            <div class="user-info">
+                                <h3>Mathias Romero</h3>
+                                <span>Happy customer</span>
+                            </div>
+                        </div>
+                        <span class="ri-double-quotes-r"></span>
+                    </div>
+                    <div class="swiper-slide box">
+                        <div class="stars">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic sapiente suscipit ut? Reiciendis exercitationem impedit, saepe architecto aperiam, illo quidem laboriosam possimus maxime, earum sapiente. Iusto perspiciatis ipsam praesentium sit.</p>
+                        <div class="user">
+                            <img src="./img/person4.jpg" alt="">
+                            <div class="user-info">
+                                <h3>Emilia Torres</h3>
+                                <span>Happy customer</span>
+                            </div>
+                        </div>
+                        <span class="ri-double-quotes-r"></span>
+                    </div>
+                    <div class="swiper-slide box">
+                        <div class="stars">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic sapiente suscipit ut? Reiciendis exercitationem impedit, saepe architecto aperiam, illo quidem laboriosam possimus maxime, earum sapiente. Iusto perspiciatis ipsam praesentium sit.</p>
+                        <div class="user">
+                            <img src="./img/person3.jpg" alt="">
+                            <div class="user-info">
+                                <h3>Joaquin Acosta </h3>
+                                <span>Happy customer</span>
+                            </div>
+                        </div>
+                        <span class="ri-double-quotes-r"></span>
+                    </div>
+                </div>
                 <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <h1 class="heading"> ¡<span>Contáctenos</span>!</h1>
+
+            <div class="row">
+                <form id="form" class="form"
+                    action="https://formspree.io/f/xjkvorla"
+                    method="POST"
+                >
+                    <input type="text" name="name" placeholder="Nombre" id="name" class="box" required>
+                    <input type="email" name="email" placeholder="Email" id="email" class="box" required>
+                    <input type="number" name="phone" placeholder="Teléfono" id="phone" class="box" required>
+                    <textarea name="mensaje" class="box" placeholder="Escribe tu mensaje" id="message" cols="30" rows="10"></textarea>
+                    <button type="submit" class="btn">Enviar mensaje</button>
+                </form>
+
+                <div class="image">
+                    <img src="/img/contact.jpg" alt="">
+                </div>
             </div>
         </section>
         <section class="hero-img">
@@ -137,6 +390,17 @@
         </section>
     </main>
         
+    <!-- Modal de validación de edad -->
+
+    <div id="ageModal" class="modal">
+        <div class="modal-content">
+            <h2>¿Sos mayor de edad?</h2>
+            <p>Al confirmar ser mayor de edad manifestás tu conformidad con los términos de confidencialidad y el uso de cookies de este sitio web.</p>
+            <button id="yesButton">SI!</button>
+            <button id="noButton">NO!</button>
+        </div>
+    </div>
+    
     <footer>
         <a href="index.html" class="logo">
             <img src="./img/LogoMin.png" alt="Logo DLI Market">
@@ -208,16 +472,9 @@
         </div>
     </footer>
 
-    
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script> 
-        AOS.init({
-            offset:1,
-        }); 
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
 
-    <script src="script.js"></script>
+    <script async src="script.js"></script>
 </body>
 </html>
