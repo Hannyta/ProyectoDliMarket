@@ -1069,6 +1069,108 @@ footer iframe:hover {
     background-color: var(--tertiary-color);
 }
 
-.shopping-Cart {
+.cart {
+    margin: 2rem;
+}
+
+.cart-container h1 {
+    font-family: "Raleway", serif;
+    font-size: var(--large-font);
+    color: var(--dark-color);
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.empty-cart {
+    font-size: var(--medium-font);
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-left: 1rem;
+}
+
+.listCart {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.cartItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary-color);
+    padding: 0.5rem;
+    padding-right: 1.5rem;
+    border-radius: 1rem;
+}
+
+.cartItem-img {
+    width: 4rem;
+    border-radius: 1rem;
+}
+
+.quantity-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quantity-cont p {
+    padding: 0.5rem;
+    font-weight: bold;
+}
+
+.btn-quantity {
+    width: 26px;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 6px;
+    border: transparent;
+    cursor: pointer;
+    transition: all .3s ease;
+}
     
+.btn-quantity:hover {
+    background: var(--primary-color);
+    color: var(--white-color);
+}
+
+.cartItem-delete {
+    border: 0;
+    background-color: transparent;
+    color: var(--tertiary-color);
+    cursor: pointer;
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--light-gray);
+    padding: 1rem;
+    border-radius: 1rem;
+    color: var(--dark-color);
+    text-transform: uppercase;
+}
+
+.btn-cart {
+    padding: 8px 16px;
+    background: var(--secondary-color);
+    border: 2px solid transparent;
+    border-radius: 7px;
+    color: var(--white-color);
+    font-size: var(--medium-font);
+    font-weight: 400;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-cart:hover{
+    transform: scale(1.1);
+    background: var(--tertiary-color);
 }

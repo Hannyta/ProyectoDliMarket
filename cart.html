@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="DLI Market - Tu tienda de bebidas y snacks favoritos.">
+
+    <title>DLI Market</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- link de iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    
+    <!-- link Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Beiruti:wght@200..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Link para el Favicon -->
+    <link rel="icon" type="image/ico" href="img/favicon.ico">
+</head>
+
+<body>
+    <main>
+        <section id="cart" class="cart">
+            <article class="cart-container">
+                <h1>Carrito de compras</h1>
+                <div class="cart-status">
+                    <p class="empty-cart"> 
+                        Tu carrito esta vacio
+                        <i class="ri-emotion-sad-line"></i>
+                    </p>
+                </div>
+                <div class="listCart">
+                    <div class="cartItems">
+                        <img class="cartItem-img" src="./img/Productos/Licores/TRES PLUMAS CAFE AL COÑAC.png" alt="">
+                        <div class="cartItem-title">
+                            <small>Titulo</small>
+                            <h3>Producto 06</h3>
+                        </div>
+                        <div class="cartItem-price">
+                            <p>$1000</p>
+                        </div>
+                        <div class="cartItem-quantity">
+                            <small>Cantidad</small>
+                            <div class="quantity-cont">
+                                <button class="btn-quantity">+</button>
+                                <p>1</p>
+                                <button class="btn-quantity">-</button>
+                            </div>
+                        </div>
+                        <div class="cartItem-subtotal">
+                            <p>$2000</p>
+                        </div>
+                        <button class="cartItem-delete">
+                            <i class="ri-delete-bin-6-line"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="listCart">
+                    <div class="cartItems">
+                        <img class="cartItem-img" src="./img/Productos/Cervezas/154.jpg" alt="">
+                        <div class="cartItem-title">
+                            <small>Titulo</small>
+                            <h3>Producto 02</h3>
+                        </div>
+                        <div class="cartItem-price">
+                            <p>$1000</p>
+                        </div>
+                        <div class="cartItem-quantity">
+                            <small>Cantidad</small>
+                            <p>+</p>
+                            <p>2</p>
+                            <p>-</p>
+                        </div>
+                        <div class="cartItem-subtotal">
+                            <p>$2000</p>
+                        </div>
+                        <button class="cartItem-delete">
+                            <i class="ri-delete-bin-6-line"></i>
+                        </button>
+                    </div>
+                </div>
+                    <div class="summary">
+                        <small>
+                            2 artículos
+                        </small>
+                        <p>
+                            Total: $
+                            <span id="cartTotal">
+                                0.00
+                            </span>
+                        </p>
+                        <button class="btn-cart" id="btn-checkout">
+                            Comprar ahora
+                        </button>
+                    </div>
+                    <button class="btn-cart" id="btn-return">
+                        <i class="ri-arrow-go-back-fill"></i>
+                        Seguir comprando
+                    </button>
+            </article> 
+        </section>
+    </main>
+
+    <script src="style.css"></script>
+
+</body>
+</html>
